@@ -1,0 +1,9 @@
+{
+  "name": "micro-fe-sample",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/micro-fe-sample/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project micro-fe-sample --web",
+  "targets": {}
+}
