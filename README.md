@@ -99,3 +99,16 @@ And join the Nx community:
 - [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
 - [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+
+# New Repo Setup
+- Create workspace `npx create-nx-workspace@latest <workspace_name>`
+- Remove default app `npx nx g rm <workspace_name>`
+- Create shell app and two remotes 
+    - `npx nx g @nx/react:host apps/shell --remotes=shop,cart` 
+- Create a remote app
+    - `npx nx g @nx/react:remote apps/about --host=shell`
+- Create lib folder for shared logic 
+    - `npx nx g @nx/react:lib libs`
+- Run it
+    - `npx nx serve shell --devRemotes=cart,shop,about`
