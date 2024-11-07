@@ -106,9 +106,10 @@ And join the Nx community:
 - Remove default app `npx nx g rm <workspace_name>`
 - Create shell app and two remotes 
     - `npx nx g @nx/react:host apps/shell --remotes=shop,cart` 
-- Create a remote app
+- Create a new remote app
     - `npx nx g @nx/react:remote apps/about --host=shell`
 - Create lib folder for shared logic 
     - `npx nx g @nx/react:lib libs`
+    - connect lib to shell and remotes
 - Run it
     - `npx nx serve shell --devRemotes=cart,shop,about`

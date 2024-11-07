@@ -7,7 +7,9 @@
   "targets": {
     "build": {
       "executor": "@nx/webpack:webpack",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
@@ -16,11 +18,25 @@
         "baseHref": "/",
         "main": "apps/shell/src/main.ts",
         "tsConfig": "apps/shell/tsconfig.app.json",
-        "assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
-        "styles": ["apps/shell/src/styles.css"],
+        "assets": [
+          "apps/shell/src/favicon.ico",
+          "apps/shell/src/assets"
+        ],
+        "styles": [
+          "apps/shell/src/styles.css"
+        ],
         "scripts": [],
         "webpackConfig": "apps/shell/webpack.config.ts"
       },
+      "dependsOn": [
+        {
+          "dependencies": true,
+          "target": "app",
+          "projects": [
+            "libs"
+          ]
+        }
+      ],
       "configurations": {
         "development": {
           "extractLicenses": false,

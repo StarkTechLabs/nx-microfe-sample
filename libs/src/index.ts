@@ -1,3 +1,4 @@
 export const today = () => {
-    return Date.now().toLocaleString();
+    console.log('test today')
+    return new Date().toLocaleDateString()
 }

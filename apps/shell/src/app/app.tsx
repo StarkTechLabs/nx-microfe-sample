@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import NxWelcome from './nx-welcome';
-// import { today } from 'libs';
+import { today } from 'lib';
 
 import { Link, Route, Routes } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ export function App() {
           <Link to="/cart">Cart</Link>
         </li>
         <li>
-          {/* {today()} */}
+          Today: {today()}
         </li>
       </ul>
       <Routes>
